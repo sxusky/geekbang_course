@@ -4,6 +4,7 @@ import "fmt"
 
 func rotate(nums []int, k int) {
 	// 拼接为两倍数组，k求mod，然后从len的位置往左挪kMod位，然后切片len个元素
+	// -1, -100, 3, 99 | -1, -100, 3, 99
 	numsLen := len(nums)
 	kMod := k % numsLen
 	doubleNums := append(nums, nums...)
