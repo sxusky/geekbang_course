@@ -2,13 +2,14 @@ package main
 
 import "fmt"
 
-// 链
+// 链-数据结构
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+	// 使用递归的方式合并
 	if l1 == nil {
 		return l2
 	} else if l2 == nil {
