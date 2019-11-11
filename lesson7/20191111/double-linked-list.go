@@ -31,7 +31,7 @@ func (list *DoubleLinkedList) Init() {
 }
 
 // Get 获取指定位置的节点
-func (list *DoubleLinkedList) Get(index uint) *DoubleNode {
+func (list *DoubleLinkedList) Get(index uint) *DoubleLinkedNode {
 	if list.Size == 0 || index > list.Size-1 {
 		return nil
 	}
@@ -47,7 +47,7 @@ func (list *DoubleLinkedList) Get(index uint) *DoubleNode {
 }
 
 // Append 向双链表后面追加节点
-func (list *DoubleLinkedList) Append(node *DoubleNode) bool {
+func (list *DoubleLinkedList) Append(node *DoubleLinkedNode) bool {
 	if node == nil {
 		return false
 	}
@@ -69,7 +69,7 @@ func (list *DoubleLinkedList) Append(node *DoubleNode) bool {
 }
 
 // Insert 向双链表指定位置插入节点
-func (list *DoubleLinkedList) Insert(index uint, node *DoubleNode) bool {
+func (list *DoubleLinkedList) Insert(index uint, node *DoubleLinkedNode) bool {
 	if index > list.Size || node == nil {
 		return false
 	}
